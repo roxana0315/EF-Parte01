@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="{% static 'mi_aplicacion/styles.css' %}">
+
+    <title>Mi Proyecto</title>
+</head>
+<body style="background-color: #F9EBEA;">  <!-- Fondo de color rojo -->
+
+    <div class="menu">
+        <img src="{% static 'mi_aplicacion/Untel_01.png' %}" alt="logo" class="logo">
+        <ul>
+            <li><a href="{% url 'Paises' %}">inicio</a></li>
+            <li><a href="{% url 'Paises' %}">Integrantes</a></li>
+            <li><a href="{% url 'RegistrarPais' %}">Crear Docente</a></li>
+            <li><a href="{% url 'Editoriales' %}">Listar Docentes</a></li>
+            <li><a href="{% url 'CrearEditorial' %}">Crear Curso</a></li>
+            <li><a href="{% url 'CrearEditorial' %}">Listar Cursos</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
